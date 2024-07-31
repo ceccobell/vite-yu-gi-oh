@@ -1,10 +1,12 @@
 <script>
 import { store } from '../store.js'
 import cards from './cards.vue'
+import loader from './loader.vue'
 
 export default {
     components: {
-        cards
+        cards,
+        loader
     },
     data() {
         return {
@@ -15,6 +17,9 @@ export default {
 </script>
     
 <template>
+    <div class="d-flex justify-content-center" v-if="store.isLoading">
+        <loader />
+    </div>
     <div class="container">
         <div class="row">
             <cards :cards="store.cardsList" />
