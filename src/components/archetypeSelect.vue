@@ -26,9 +26,7 @@ export default {
     <div class="col-6 d-flex align-items-center">
         <select class="form-select" aria-label="Default select example">
           <option selected>select archetype</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option v-for="archetype, index in store.archetypes" :key="index" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
         </select>
     </div>
 </template>
