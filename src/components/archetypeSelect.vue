@@ -1,6 +1,24 @@
 <script>
+import { store } from '../store';
+import axios from 'axios'
+
 export default {
-    
+    data() {
+        return {
+            store
+        }
+    },
+    created() {
+        this.getArchetype()
+    },
+    methods: {
+    getArchetype() {
+      axios.get(store.selectApiUrl).then((result) => {
+        store.archetypes = result.data
+        console.log(store.archetypes)
+      })
+    }
+  }
 }
 </script>
 
