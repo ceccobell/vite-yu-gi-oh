@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store.js'
-import cards from './cards.vue'
-import loader from './loader.vue'
+import cards from './appCards.vue'
+import loader from './appLoader.vue'
 
 export default {
     components: {
