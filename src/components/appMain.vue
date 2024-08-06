@@ -3,6 +3,7 @@ import { store } from '../store.js'
 import cards from './appCards.vue'
 import loader from './appLoader.vue'
 
+
 export default {
     components: {
         cards,
