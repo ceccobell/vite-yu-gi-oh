@@ -1,5 +1,10 @@
 <script>
+import filteredCards from './filterCards.vue'
+
 export default {
+    components: {
+        filteredCards
+    },
     props: {
         cards: Array
     }
